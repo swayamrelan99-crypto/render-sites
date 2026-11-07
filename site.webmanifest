@@ -1,0 +1,11 @@
+{
+  "name": "GLPatch",
+  "short_name": "GLPatch",
+  "description": "GLPro GLPatch — transdermal blood sugar and GLP-1 support patches.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F0FAFA",
+  "theme_color": "#0A7A88",
+  "icons": [{ "src": "/assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}
