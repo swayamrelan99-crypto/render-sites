@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gut-save.onrender.com/sitemap.xml
