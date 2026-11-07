@@ -1,0 +1,5 @@
+/* SITE */
+Site: balmorex.onrender.com
+Contact: hello@balmorex.onrender.com
+Last update: 2026/10/12
+Components: hand-written HTML, CSS and JavaScript, no frameworks
