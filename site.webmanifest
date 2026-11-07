@@ -1,0 +1,16 @@
+{
+ "name": "AlphaRock Notebook",
+ "short_name": "AlphaRock",
+ "description": "Independent information and ordering website for AlphaRock liquid drops.",
+ "start_url": "/index.html",
+ "display": "standalone",
+ "background_color": "#FFF8E6",
+ "theme_color": "#946000",
+ "icons": [
+  {
+   "src": "assets/images/apple-touch-icon.png",
+   "sizes": "180x180",
+   "type": "image/png"
+  }
+ ]
+}
