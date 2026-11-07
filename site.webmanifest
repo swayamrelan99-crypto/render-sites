@@ -1,0 +1,21 @@
+{
+ "name": "Jellutide",
+ "short_name": "Jellutide",
+ "description": "Jellutide berry gummies for a pre-meal routine.",
+ "start_url": "./index.html",
+ "display": "standalone",
+ "background_color": "#F0FDF4",
+ "theme_color": "#15803D",
+ "icons": [
+  {
+   "src": "icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}

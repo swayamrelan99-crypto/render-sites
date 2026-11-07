@@ -1,0 +1,21 @@
+# Jellutide (jellutide.onrender.com)
+
+> Independent information and ordering website for Jellutide, a berry-flavored dietary supplement gummy for adults (30 gummies per bottle) taken before a meal as part of a healthy weight routine.
+
+## Key facts
+- Label: 525 mg proprietary blend of apple cider vinegar and BHB calcium, magnesium and sodium salts per gummy; 8 calories, 2 g sugars (1 g added); individual blend amounts are not disclosed
+- Directions: one gummy before a meal
+- Packs (USD): 2 bottles $79 each ($158 plus shipping); 3 bottles $69 each ($207, free US shipping); 6 bottles $49 each ($294, free US shipping)
+- One-time purchase; 60-day money-back guarantee, subject to the terms shown at checkout
+- Not a stand-alone weight-loss solution and not a treatment for any condition; adults only; contains sugar; ask a doctor first if taking insulin, diabetes, digoxin or water-pill medicine
+
+## Pages
+- [Home](https://jellutide.onrender.com/)
+- [About Jellutide](https://jellutide.onrender.com/about-jellutide.html)
+- [Benefits](https://jellutide.onrender.com/jellutide-benefits.html)
+- [How It Works](https://jellutide.onrender.com/how-jellutide-works.html)
+- [Ingredients](https://jellutide.onrender.com/jellutide-ingredients.html)
+- [Reviews](https://jellutide.onrender.com/jellutide-reviews.html)
+- [Pricing](https://jellutide.onrender.com/jellutide-pricing.html)
+- [FAQ](https://jellutide.onrender.com/jellutide-faq.html)
+- [Blog](https://jellutide.onrender.com/blog/index.html)
