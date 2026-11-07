@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" role="img" aria-label="Bitter Melon">
+  <defs>
+    <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#dcfce7"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="480" fill="url(#g4)" rx="32"/>
+  <g opacity="0.18" transform="translate(240,180)">
+    <path d="M0 -80 C 60 -60 80 0 0 80 C -80 0 -60 -60 0 -80 Z" fill="#16a34a"/>
+  </g>
+  <text x="240" y="240" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="180" font-weight="700" fill="#16a34a" dominant-baseline="middle">B</text>
+  <text x="240" y="400" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="600" fill="#16a34a" opacity="0.85">Bitter Melon</text>
+</svg>
