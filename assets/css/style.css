@@ -1,0 +1,404 @@
+:root{
+  --ink:#1B1426;--mut:#2B2338;--tang:#2A7A4B;--plum-d:#5B2E91;--amberly:#F0B64A;--nightshade:#5B2E91;--nightshade2:#AE8BDD;
+  --orchid:#FBF8FE;--orchid2:#F6F0FC;--plum-t:#E3D4F4;--red:#2A7A4B;--gn:#FFF1DC;
+  --fh:"Rubik",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --fb:"Noto Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --wave:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40' preserveAspectRatio='none'%3E%3Cpath d='M0 40V24C200 -4 420 -6 700 16S1180 44 1440 12V40Z'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip}
+body{margin:0;font:400 24.1px/1.7 var(--fb);color:var(--ink);background:#fff;overflow-x:clip}
+img{max-width:100%;height:auto;display:block}
+svg{width:20px;height:20px}
+a{color:var(--plum-d);text-underline-offset:3px}
+ul,ol{margin:0;padding:0;list-style:none}
+p{margin:0 0 1em}
+h1,h2,h3,h4{font-family:var(--fh);line-height:1.2;margin:0 0 .5em;color:var(--ink);letter-spacing:-.01em}
+h1{font-size:clamp(38px,5vw,62px);font-weight:700}
+h2{font-size:clamp(34px,4vw,52px);font-weight:700}
+h3{font-size:27.3px;font-weight:600}
+.gpz-wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* reveal animation */
+.js .gpz-reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.js .gpz-reveal.is-in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.gpz-reveal{opacity:1;transform:none;transition:none}}
+
+/* announcement strip */
+.gpz-strip{background:var(--nightshade);color:var(--plum-t);text-align:center;font:600 18.9px/1.3 var(--fh);padding:9px 16px}
+.gpz-strip b{color:var(--amberly)}
+
+/* header */
+.gpz-top{position:sticky;top:0;z-index:60;background:#fff;transition:box-shadow .3s}
+.gpz-top.is-stuck{box-shadow:0 8px 24px rgba(29,42,28,.12)}
+.gpz-toprow{display:flex;align-items:center;gap:16px;height:82px;max-width:1360px}
+.gpz-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font:700 31.2px/1 var(--fh);flex:none}
+.gpz-brand img{width:40px;height:40px}
+.gpz-links{display:flex;gap:2px;margin-left:auto;align-items:center}
+.gpz-links a{white-space:nowrap;text-decoration:none;color:var(--ink);font:600 20.2px/1 var(--fh);padding:12px 13px;border-radius:99px;transition:background .2s,color .2s}
+.gpz-links a:hover{background:var(--orchid2);color:var(--plum-d)}
+.gpz-buy{flex:none;background:var(--plum-d);color:#fff;text-decoration:none;font:700 20.2px/1 var(--fh);padding:14px 22px;border-radius:99px;box-shadow:0 8px 18px rgba(91,46,145,.3);transition:transform .2s,background .2s}
+.gpz-buy:hover{background:var(--nightshade);transform:translateY(-2px)}
+.gpz-opener{display:none;margin-left:auto;background:var(--orchid2);color:var(--plum-d);border:0;border-radius:99px;font:700 19.5px/1 var(--fh);padding:12px 16px;cursor:pointer;align-items:center;gap:8px}
+.gpz-opener i{width:19px;height:11px;border-top:3px solid var(--plum-d);border-bottom:3px solid var(--plum-d);position:relative;display:block}
+.gpz-overlay{position:fixed;inset:0;z-index:55;background:#fff;padding:110px 24px 30px;overflow:auto;opacity:0;visibility:hidden;transform:translateY(-12px);transition:opacity .25s,transform .25s,visibility .25s}
+.menu-open .gpz-overlay{opacity:1;visibility:visible;transform:none}
+.menu-open{overflow:hidden}
+.gpz-overin{max-width:520px;margin:0 auto;display:flex;flex-direction:column;gap:6px}
+.gpz-overin a{font:600 27.3px/1.2 var(--fh);color:var(--ink);text-decoration:none;padding:14px 18px;border-radius:16px}
+.gpz-overin a:hover{background:var(--orchid2)}
+.gpz-overin .gpz-overbuy{background:var(--plum-d);color:#fff;text-align:center;margin-top:12px}
+@media(max-width:1500px){.gpz-links,.gpz-buy{display:none}.gpz-opener{display:flex}}
+
+/* buttons */
+.gpz-btn{display:inline-block;background:var(--plum-d);color:#fff;text-decoration:none;font:700 22.8px/1.1 var(--fh);padding:17px 30px;border-radius:99px;box-shadow:0 10px 22px rgba(91,46,145,.3);transition:transform .2s,background .2s}
+.gpz-btn:hover{background:var(--nightshade);transform:translateY(-2px)}
+.gpz-btn2{display:inline-block;background:var(--orchid2);color:var(--plum-d);text-decoration:none;font:700 22.8px/1.1 var(--fh);padding:17px 28px;border-radius:99px;transition:background .2s,transform .2s}
+.gpz-btn2:hover{background:var(--plum-t);transform:translateY(-2px)}
+.gpz-secure{font:600 18.2px/1.3 var(--fh);color:var(--mut);margin-top:10px;display:flex;align-items:center;gap:7px}
+.gpz-secure svg{width:16px;height:16px;flex:none}
+.gpz-pulse{position:relative}
+.gpz-pulse:after{content:"";position:absolute;inset:0;border-radius:99px;box-shadow:0 0 0 0 rgba(180,87,11,.5);animation:gpzp 2.4s infinite}
+@keyframes gpzp{70%{box-shadow:0 0 0 16px rgba(180,87,11,0)}100%{box-shadow:0 0 0 0 rgba(180,87,11,0)}}
+
+/* sections */
+.gpz-s{position:relative;background:var(--bg,#fff);padding:100px 0 86px}
+.gpz-s:before{content:"";position:absolute;left:0;right:0;top:-33px;height:34px;background:var(--bg,#fff);-webkit-mask:var(--wave) center/100% 100% no-repeat;mask:var(--wave) center/100% 100% no-repeat;pointer-events:none}
+.gpz-t-cream{--bg:var(--orchid)}.gpz-t-light{--bg:var(--orchid2)}.gpz-t-dark{--bg:var(--nightshade);color:#fff}
+.gpz-t-dark h2,.gpz-t-dark h3{color:#fff}
+.gpz-s.gpz-wave-top{margin-top:0}
+.gpz-head{margin:0 0 36px;max-width:760px}
+.gpz-head.gpz-mid{margin-left:auto;margin-right:auto;text-align:center}
+.gpz-eyebrow{font:700 18.2px/1 var(--fh);letter-spacing:.14em;text-transform:uppercase;color:var(--plum-d);margin:0 0 14px}
+.gpz-t-dark .gpz-eyebrow{color:var(--amberly)}
+.gpz-sub{color:var(--mut);font-size:24.7px}
+.gpz-t-dark .gpz-sub{color:#AE8BDD}
+.gpz-center{text-align:center}
+
+/* hero */
+.gpz-hero{background:radial-gradient(900px 520px at 18% 0,var(--orchid2) 0,#fff 70%);padding:40px 0 10px}
+.gpz-herogrid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:start}
+.gpz-herovis{min-width:0}
+.gpz-stage{position:relative;padding:20px 0 20px}
+.gpz-bottle{position:relative;z-index:2;width:100%;max-width:420px;margin:0 auto;filter:drop-shadow(0 26px 30px rgba(20,17,13,.28))}
+.gpz-halo{position:absolute;left:50%;top:48%;width:80%;aspect-ratio:1;transform:translate(-50%,-50%);z-index:1}
+.gpz-halo i{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle,var(--plum-t) 0,rgba(251,232,190,0) 68%);animation:gpzh 5s ease-in-out infinite}
+.gpz-halo i+i{animation-delay:2.5s}
+@keyframes gpzh{0%,100%{transform:scale(.82);opacity:.7}50%{transform:scale(1.12);opacity:1}}
+.gpz-vizcard{position:relative;background:#fff;border-radius:26px;padding:24px 22px 18px;box-shadow:0 18px 44px rgba(29,42,28,.12);margin-top:10px}
+.gpz-vizcard .gpz-vt{font:700 18px/1 var(--fh);letter-spacing:.12em;text-transform:uppercase;color:var(--plum-d);text-align:center;margin-bottom:10px}
+.gpz-vizsvg{width:100%;height:auto;display:block}
+.gpz-vizsvg .gpz-pop,.js .gpz-vizsvg .gpz-pop{opacity:0;transform:scale(.55);transform-box:fill-box;transform-origin:center;transition:opacity .5s var(--d,0s),transform .6s var(--d,0s) cubic-gpzier(.3,1.5,.5,1)}
+.gpz-vizsvg.on .gpz-pop{opacity:1;transform:none}
+.js .gpz-draw{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.2s .2s ease}
+.js .gpz-vizsvg.on .gpz-draw{stroke-dashoffset:0}
+html:not(.js) .gpz-pop{opacity:1}
+.gpz-vizleg{display:flex;justify-content:center;gap:22px;margin-top:10px;font:600 18.2px/1 var(--fh);color:var(--mut)}
+.gpz-vizleg span{display:inline-flex;align-items:center;gap:6px}
+.gpz-vizleg i{width:11px;height:11px;border-radius:50%;display:inline-block}
+.gpz-cap{font-size:18.2px;color:var(--mut);text-align:center;margin:10px 0 0}
+.gpz-herotext{min-width:0}
+.gpz-check{display:grid;gap:10px;margin:0 0 20px}
+.gpz-check li{position:relative;padding-left:34px;font-size:22.8px}
+.gpz-check li:before{content:"";position:absolute;left:0;top:4px;width:22px;height:22px;border-radius:50%;background:var(--plum-d) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/15px no-repeat}
+.gpz-nums{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 22px}
+.gpz-numbox{background:var(--orchid);border-radius:16px;padding:14px 16px;display:flex;gap:10px;align-items:flex-start}
+.gpz-numbox b{flex:none;width:28px;height:28px;border-radius:50%;background:var(--plum-d);color:#fff;display:flex;align-items:center;justify-content:center;font:700 18.2px/1 var(--fh)}
+.gpz-numbox span{font-size:20.2px;line-height:1.4;color:var(--ink)}
+.gpz-extra{background:var(--orchid2);border-radius:16px;padding:16px 20px;margin:0 0 22px}
+.gpz-extra h4{font-size:20.8px;margin-bottom:8px}
+.gpz-extra ul{display:grid;gap:7px}
+.gpz-extra li{font-size:20.2px;padding-left:18px;position:relative}
+.gpz-extra li:before{content:"•";color:var(--plum-d);position:absolute;left:0}
+.gpz-btnrow{display:flex;flex-wrap:wrap;gap:14px;margin:6px 0 4px}
+
+/* trust strip */
+.gpz-trust{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-items:center;text-align:center}
+.gpz-trust li{display:flex;flex-direction:column;align-items:center;gap:10px}
+.gpz-trust img{width:118px;height:auto;max-height:84px;object-fit:contain}
+.gpz-trust .gpz-usaicon{width:118px;height:84px;display:flex;align-items:center;justify-content:center}
+.gpz-trust span{font:600 18.9px/1.3 var(--fh);color:var(--mut)}
+
+/* why-choose 4 boxes */
+.gpz-why{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.gpz-whycard{background:#fff;border-radius:20px;padding:28px 22px;text-align:center;box-shadow:0 10px 28px rgba(29,42,28,.08)}
+.gpz-whycard .gpz-ic{width:56px;height:56px;margin:0 auto 14px;border-radius:50%;background:var(--orchid2);display:flex;align-items:center;justify-content:center}
+.gpz-whycard .gpz-ic img{width:34px;height:34px;object-fit:contain}
+.gpz-whycard .gpz-ic svg{width:30px;height:30px}
+.gpz-badge{width:112px;height:112px;object-fit:contain;margin:0 auto 14px;display:block}
+.gpz-whycard h3{font-size:23.4px;margin-bottom:6px}
+.gpz-whycard p{font-size:19.5px;color:var(--mut);margin:0}
+
+/* wave cta band */
+.gpz-ctaband{background:linear-gradient(120deg,var(--nightshade),var(--nightshade2));color:#fff;padding:54px 0}
+.gpz-ctaband .gpz-wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px}
+.gpz-ctaband h3{color:#fff;margin:0 0 4px;font-size:31.2px}
+.gpz-ctaband p{color:#AE8BDD;margin:0}
+
+/* split */
+.gpz-split{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
+.gpz-split.gpz-rev{grid-template-columns:.95fr 1.05fr}
+.gpz-split.gpz-rev .gpz-splitmedia{order:2}
+.gpz-split>*{min-width:0}
+.gpz-splitmedia img{border-radius:28px;box-shadow:0 20px 44px rgba(29,42,28,.14)}
+.gpz-article p{font-size:23.4px;color:var(--ink)}
+.gpz-article h3{margin-top:1.1em}
+
+/* pricing */
+.gpz-plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:end}
+.gpz-plan{background:#fff;border-radius:24px;padding:26px 22px 30px;box-shadow:0 14px 34px rgba(29,42,28,.1);position:relative;border:2px solid transparent}
+.gpz-plan.gpz-best{border-color:var(--plum-d);transform:scale(1.04);z-index:2;background:linear-gradient(180deg,#fff,var(--orchid))}
+.gpz-ribbon{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--amberly);color:#3A2700;font:700 18px/1 var(--fh);padding:9px 18px;border-radius:99px;box-shadow:0 8px 16px rgba(255,180,0,.4);white-space:nowrap}
+.gpz-plan h3{font-size:20.8px;text-transform:uppercase;letter-spacing:.06em;text-align:center;color:var(--mut);margin-bottom:4px}
+.gpz-plan .gpz-pname{font-size:26px;font-weight:700;text-align:center;margin-bottom:14px}
+.gpz-plan img{max-width:160px;margin:0 auto 14px}
+.gpz-plan .gpz-price{text-align:center;font:700 44.2px/1 var(--fh);color:var(--plum-d)}
+.gpz-plan .gpz-priceu{font-size:18.2px;color:var(--mut);font-weight:500}
+.gpz-plan .gpz-total{text-align:center;font-size:19.5px;color:var(--mut);margin:6px 0 16px}
+.gpz-plan .gpz-total s{color:#AE8BDD;margin-right:6px}
+.gpz-plan ul{display:grid;gap:9px;margin:0 0 20px}
+.gpz-plan ul li{font-size:18.9px;padding-left:26px;position:relative;color:var(--ink)}
+.gpz-plan ul li:before{content:"✓";position:absolute;left:0;color:var(--plum-d);font-weight:700}
+.gpz-plan .gpz-btn{display:block;text-align:center;width:100%}
+.gpz-pay{display:flex;justify-content:center;gap:8px;margin-top:12px;flex-wrap:wrap}
+.gpz-pay span{font:700 18px/1 var(--fh);border:1px solid #FBEBC4;border-radius:5px;padding:5px 7px;color:var(--mut)}
+.gpz-pricecap{text-align:center;font-size:18.9px;color:var(--mut);margin-top:24px;max-width:680px;margin-left:auto;margin-right:auto}
+
+/* guarantee */
+.gpz-guarantee{display:grid;grid-template-columns:.5fr 1fr;gap:44px;align-items:center}
+.gpz-guarantee img{max-width:220px;margin:0 auto}
+
+/* bonuses */
+.gpz-bonuses{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.gpz-bonus{background:#fff;border-radius:20px;padding:26px 22px;text-align:center;box-shadow:0 10px 28px rgba(29,42,28,.08)}
+.gpz-bonus .gpz-emoji{font-size:49.4px;margin-bottom:10px;display:block}
+.gpz-bonus h3{font-size:22.8px;margin-bottom:6px}
+.gpz-bonus p{font-size:18.9px;color:var(--mut);margin:0}
+.gpz-bonus b{display:block;font:700 18px/1 var(--fh);letter-spacing:.1em;text-transform:uppercase;color:var(--plum-d);margin-bottom:8px}
+
+/* shipping strip */
+.gpz-shipstrip{background:var(--orchid);border-radius:22px;padding:26px 30px;display:flex;flex-wrap:wrap;align-items:center;gap:18px 34px;justify-content:center}
+.gpz-shipitem{display:flex;align-items:center;gap:10px;font:600 20.2px/1.3 var(--fh);color:var(--ink)}
+.gpz-shipitem svg{width:24px;height:24px;flex:none}
+
+/* ingredients */
+.gpz-ingrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.gpz-ingcard{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 10px 28px rgba(29,42,28,.08)}
+.gpz-ingcard img{width:100%;height:150px;object-fit:cover}
+.gpz-ingbody{padding:18px 20px 20px}
+.gpz-ingbody b{display:block;font:700 18px/1 var(--fh);letter-spacing:.08em;text-transform:uppercase;color:var(--plum-d);margin-bottom:6px}
+.gpz-ingbody h3{font-size:23.4px;margin-bottom:4px}
+.gpz-ingbody .gpz-amt{font-size:18px;color:var(--mut);margin-bottom:8px}
+.gpz-ingbody p{font-size:18.9px;color:var(--mut);margin:0}
+.gpz-ingnote{background:var(--orchid2);border-radius:16px;padding:18px 22px;margin-top:24px;font-size:19.5px;color:var(--ink)}
+
+/* benefits */
+.gpz-benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.gpz-benefit{background:#fff;border-radius:18px;padding:24px 20px;box-shadow:0 10px 26px rgba(29,42,28,.08)}
+.gpz-benefit .gpz-ic{width:48px;height:48px;border-radius:12px;background:var(--orchid2);display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.gpz-benefit .gpz-ic svg{width:26px;height:26px}
+.gpz-benefit h3{font-size:22.1px;margin-bottom:6px}
+.gpz-benefit p{font-size:18.9px;color:var(--mut);margin:0}
+
+/* reviews */
+.gpz-revs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.gpz-rev{background:#fff;border-radius:20px;padding:22px;box-shadow:0 10px 28px rgba(29,42,28,.08)}
+.gpz-revhead{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.gpz-revhead img{width:52px;height:52px;border-radius:50%;object-fit:cover}
+.gpz-revhead b{display:block;font-size:20.2px}
+.gpz-revhead span{font-size:18px;color:var(--mut)}
+.gpz-stars{color:var(--plum-d);font-size:18.2px;margin-bottom:8px}
+.gpz-rev p{font-size:19.5px;color:var(--ink);margin:0;font-style:italic}
+.gpz-ratingbar{text-align:center;margin-top:26px;font:700 20.8px/1 var(--fh);color:var(--ink)}
+.gpz-ratingbar span{display:block;font-size:18px;color:var(--mut);font-weight:500;margin-top:4px}
+
+/* FAQ */
+.gpz-faq{max-width:820px;margin:0 auto;display:grid;gap:12px}
+.gpz-faq details{background:#fff;border-radius:16px;padding:18px 22px;box-shadow:0 8px 20px rgba(29,42,28,.07)}
+.gpz-faq summary{cursor:pointer;font:600 22.1px/1.4 var(--fh);color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.gpz-faq summary::-webkit-details-marker{display:none}
+.gpz-faq summary:after{content:"+";font-size:31.2px;color:var(--plum-d);flex:none;transition:transform .2s}
+.gpz-faq details[open] summary:after{transform:rotate(45deg)}
+.gpz-faq p{margin:12px 0 0;color:var(--mut);font-size:20.2px}
+
+/* final cta */
+.gpz-finale{background:radial-gradient(900px 440px at 50% 0,var(--orchid2) 0,#fff 70%);text-align:center;padding:90px 0}
+.gpz-finale h2{font-size:clamp(28px,3.4vw,40px)}
+.gpz-finale p{font-size:23.4px;color:var(--mut);max-width:620px;margin:0 auto 26px}
+
+/* label */
+.gpz-labelwrap{text-align:center}
+.gpz-labelwrap img{max-width:760px;margin:0 auto;border-radius:16px;box-shadow:0 18px 40px rgba(29,42,28,.14)}
+
+/* references */
+.gpz-refs{display:grid;gap:10px;max-width:700px;margin:0 auto}
+.gpz-refs a{display:block;background:#fff;border-radius:12px;padding:14px 18px;font-size:19.5px;box-shadow:0 6px 16px rgba(29,42,28,.06);text-decoration:none;color:var(--ink)}
+.gpz-refs a:hover{color:var(--plum-d)}
+
+/* footer */
+.gpz-foot{background:var(--nightshade);color:#AE8BDD;padding:60px 0 24px}
+.gpz-footgrid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:34px;margin-bottom:34px}
+.gpz-footcol h4{color:#fff;font-size:20.2px;margin-bottom:14px}
+.gpz-footcol ul{display:grid;gap:9px}
+.gpz-footcol a{color:#AE8BDD;text-decoration:none;font-size:18.9px}
+.gpz-footcol a:hover{color:var(--amberly)}
+.gpz-footbrand{display:flex;align-items:center;gap:10px;color:#fff;font:700 27.3px/1 var(--fh);margin-bottom:12px}
+.gpz-footbrand img{width:34px;height:34px}
+.gpz-foot p.gpz-disc{font-size:18px;color:#2B2338;line-height:1.75;max-width:980px}
+.gpz-footbottom{border-top:1px solid #7A5C00;padding-top:20px;font-size:18px;color:#2B2338;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* sticky mobile cta */
+.gpz-sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#fff;box-shadow:0 -8px 24px rgba(29,42,28,.14);padding:12px 16px;display:none;align-items:center;justify-content:space-between;gap:14px;transition:transform .3s}
+.gpz-sticky.gpz-hide{transform:translateY(120%)}
+.gpz-sticky b{font:700 19.5px/1.2 var(--fh)}
+.gpz-sticky span{display:block;font-size:18px;color:var(--mut)}
+.gpz-sticky .gpz-btn{padding:13px 22px;font-size:19.5px}
+@media(max-width:780px){.gpz-sticky{display:flex}body{padding-bottom:78px}}
+
+/* responsive */
+@media(max-width:980px){
+  .gpz-herogrid,.gpz-split,.gpz-split.gpz-rev,.gpz-guarantee{grid-template-columns:1fr}
+  .gpz-split.gpz-rev .gpz-splitmedia{order:0}
+  .gpz-why,.gpz-plans,.gpz-ingrid,.gpz-benefits,.gpz-revs,.gpz-bonuses{grid-template-columns:repeat(2,1fr)}
+  .gpz-plan.gpz-best{transform:none}
+  .gpz-trust{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  .gpz-s{padding:70px 0 54px}
+  .gpz-why,.gpz-plans,.gpz-ingrid,.gpz-benefits,.gpz-revs,.gpz-bonuses,.gpz-nums{grid-template-columns:1fr}
+  .gpz-ctaband .gpz-wrap{flex-direction:column;text-align:center}
+  .gpz-footgrid{grid-template-columns:1fr 1fr}
+  .gpz-footbottom{flex-direction:column;text-align:center}
+}
+
+.gpz-more{font:700 20.2px/1.3 var(--fh);color:var(--plum-d);text-decoration:none;white-space:nowrap}.gpz-more:hover{text-decoration:underline}
+.gpz-howwrap{margin-top:70px}
+.gpz-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.gpz-step{background:#fff;border-radius:18px;padding:24px 20px;box-shadow:0 10px 26px rgba(29,42,28,.08);text-align:center}
+.gpz-step b{display:flex;width:40px;height:40px;margin:0 auto 12px;border-radius:50%;background:var(--plum-d);color:#fff;align-items:center;justify-content:center;font:700 22.1px/1 var(--fh)}
+.gpz-step h3{font-size:22.1px;margin-bottom:6px}.gpz-step p{font-size:18.9px;color:var(--mut);margin:0}
+.gpz-blogcards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:22px}
+.gpz-blogcard{display:block;background:#fff;border-radius:18px;padding:24px 22px;box-shadow:0 10px 26px rgba(29,42,28,.08);text-decoration:none;color:var(--ink);transition:transform .2s}
+.gpz-blogcard:hover{transform:translateY(-3px)}
+.gpz-blogcard b{display:block;font:700 18px/1 var(--fh);letter-spacing:.1em;text-transform:uppercase;color:var(--plum-d);margin-bottom:8px}
+.gpz-blogcard h3{font-size:23.4px;margin-bottom:6px}.gpz-blogcard p{font-size:18.9px;color:var(--mut);margin:0}
+@media(max-width:980px){.gpz-steps{grid-template-columns:repeat(2,1fr)}.gpz-blogcards{grid-template-columns:1fr}}
+@media(max-width:640px){.gpz-steps{grid-template-columns:1fr}}
+
+.gpz-dd{position:relative}
+.gpz-ddb{background:none;border:0;cursor:pointer;white-space:nowrap;color:var(--ink);font:600 20.2px/1 var(--fh);padding:12px 13px;border-radius:99px}
+.gpz-ddb:hover,.gpz-dd:focus-within .gpz-ddb{background:var(--orchid2);color:var(--plum-d)}
+.gpz-ddm{position:absolute;right:0;top:100%;min-width:230px;background:#fff;border-radius:16px;box-shadow:0 18px 40px rgba(29,42,28,.16);padding:10px;display:none;z-index:70}
+.gpz-dd:hover .gpz-ddm,.gpz-dd.open .gpz-ddm,.gpz-dd:focus-within .gpz-ddm{display:grid;gap:2px}
+.gpz-ddm a{display:block;padding:10px 14px!important;border-radius:10px!important;font-size:19.5px!important}
+.gpz-ovh{font:700 18px/1 var(--fh);letter-spacing:.12em;text-transform:uppercase;color:var(--plum-d);padding:16px 18px 4px}
+.gpz-toprow{position:relative;z-index:70;background:#fff}
+.gpz-overlay{padding-top:200px}
+
+
+
+.gpz-dl{display:grid;grid-template-columns:1fr 1fr;gap:4px 24px;margin:0}
+.gpz-dl div{padding:6px 0}.gpz-dl dt{font:700 18px/1 var(--fh);letter-spacing:.1em;text-transform:uppercase;color:var(--plum-d);margin-bottom:4px}.gpz-dl dd{margin:0;font-size:20.2px;line-height:1.4}
+.gpz-spec{display:grid;gap:8px;margin:0 0 20px;list-style:none;padding:0}.gpz-spec li{background:#fff;border-radius:12px;padding:10px 14px;font-size:20.8px}.gpz-spec b{display:inline-block;min-width:84px;color:var(--plum-d);font-family:var(--fh)}
+.gpz-guarbar{display:flex;align-items:center;gap:16px;justify-content:center;background:#fff;border-radius:99px;padding:10px 26px 10px 14px;box-shadow:0 10px 28px rgba(29,42,28,.1);max-width:640px;margin:0 auto 28px}.gpz-guarbar img{width:70px;height:70px;flex:none}.gpz-guarbar p{margin:0;font:600 22.1px/1.35 var(--fh)}
+.gpz-ingcard{display:block}
+.gpz-ic b{font:800 26px/1 var(--fh);color:var(--plum-d)}
+.gpz-plans{align-items:stretch}.gpz-plan{display:flex;flex-direction:column}.gpz-plan img{height:170px;width:auto;max-width:100%;object-fit:contain;margin:0 auto 14px}.gpz-plan .gpz-btn{margin-top:auto}
+@media(max-width:640px){.gpz-dl{grid-template-columns:1fr}.gpz-guarbar{border-radius:22px;flex-direction:column;text-align:center}.gpz-steps[style]{grid-template-columns:1fr!important}}
+.gpz-mark{width:40px;height:40px;flex:none}
+.gpz-guarantee{display:grid;grid-template-columns:.5fr 1fr;gap:44px;align-items:center}
+.gpz-seal{width:220px;height:220px;margin:0 auto;display:block}
+.gpz-grp{font-size:26px;margin:30px 0 14px;color:var(--plum-d)}
+.gpz-ingcard img{display:none}
+.gpz-ingtop{height:8px}
+.gpz-ingbody{padding:20px 22px 22px}
+.gpz-ingbody h3{font-size:23.4px;margin-bottom:6px}
+.gpz-ingbody p{margin:0}
+.gpz-ing4{grid-template-columns:repeat(4,1fr)}
+.gpz-trustgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.gpz-trust-card{background:#fff;border-radius:18px;padding:24px 20px;box-shadow:0 10px 26px rgba(29,42,28,.08);border-top:4px solid var(--tang)}
+.gpz-trust-card h3{font-size:23.4px;margin-bottom:6px}
+.gpz-trust-card p{font-size:19.5px;color:var(--mut);margin:0}
+.gpz-plan img{max-width:230px}
+.gpz-whycard .gpz-badge{margin-bottom:14px}
+.gpz-splitmedia img{width:100%}
+@media(max-width:980px){.gpz-ing4,.gpz-trustgrid{grid-template-columns:repeat(2,1fr)}.gpz-guarantee{grid-template-columns:1fr}}
+@media(max-width:640px){.gpz-ing4,.gpz-trustgrid{grid-template-columns:1fr}}
+
+.gpz-pay span{font-size:15px}
+a{text-decoration-thickness:2px}
+:focus-visible{outline:4px solid #E0A53C;outline-offset:3px}
+.gpz-btn,.gpz-btn2{min-height:62px;display:inline-flex;align-items:center;justify-content:center;text-align:center}
+.gpz-links a,.gpz-ddm a{padding:14px 15px}
+.gpz-sticky b{display:block;line-height:1.25}
+.gpz-sticky .gpz-btn{padding:12px 22px;white-space:nowrap}
+.gpz-herotext .gpz-lead{font-size:26px}
+.gpz-tbl th,.gpz-tbl td{padding:16px 16px}
+.gpz-faq summary{padding:4px 0}
+.gpz-bottle{max-width:640px}
+@media(max-width:640px){.gpz-sticky b{font-size:18px;line-height:1.2}.gpz-sticky span{display:none}.gpz-sticky .gpz-btn{padding:12px 20px}}
+/* bright palette: no dark backgrounds, plain hero; DARK readable text */
+:root{--mut:#2B2338}
+body{color:#1B1426}
+.gpz-lead,.gpz-sub,.gpz-cap,.gpz-pricecap,.gpz-total,.gpz-priceu{color:#1B1426!important}
+.gpz-article p,.gpz-prose p,.gpz-prose li,.gpz-article li,.gpz-faq p,.gpz-trust-card p,.gpz-benefit p,.gpz-whycard p,.gpz-blogcard p{color:#1B1426!important}
+.gpz-strip{background:linear-gradient(90deg,#FFE48A,#E3D4F4,#FBEBDC);color:#1B1426}
+.gpz-strip b{color:#1B1426}
+.gpz-hero{background:none;padding:40px 0 10px}
+.gpz-ctaband{background:linear-gradient(105deg,#5B2E91 0%,#AE8BDD 50%,#F2C14E 100%);color:#fff}
+.gpz-ctaband h3,.gpz-ctaband p{color:#fff!important}
+.gpz-ctaband .gpz-btn{background:#FFE48A;color:#1B1426;box-shadow:0 10px 22px rgba(15,40,20,.25)}
+.gpz-ctaband .gpz-btn:hover{background:#FFEFB5;color:#1B1426}
+.gpz-finale{background:linear-gradient(135deg,#F6F0FC 0%,#FFF1D6 100%)}
+.gpz-foot{background:#F6F0FC;color:#1B1426}
+.gpz-footcol h4,.gpz-footbrand{color:#1B1426}
+.gpz-footcol a{color:#3E1F66}
+.gpz-footcol a:hover{color:#1B1426}
+.gpz-foot p,.gpz-foot p.gpz-disc,.gpz-footcol p,.gpz-footbottom{color:#1B1426}
+.gpz-footbottom{border-top:1px solid #C9B0E8}
+.gpz-benefit,.gpz-whycard,.gpz-trust-card,.gpz-blogcard{border-top:4px solid #F2C14E}
+.gpz-best{border-top:4px solid #5B2E91}
+.gpz-ribbon{background:linear-gradient(90deg,#FFE48A,#FFF0B8);color:#1B1426}
+.gpz-ic{background:linear-gradient(135deg,#E3D4F4,#FFF1D6)}
+.gpz-article ol,.gpz-prose ol{list-style:decimal;padding-left:30px}
+.gpz-article ol li,.gpz-prose ol li{margin:8px 0;padding-left:4px}
+
+/* GlycoPezil gpz hero: text left with four left-stripe step cards; two bottles in front of three fanned, tilted cards right; animated day-of-blood-sugar sketch under; DARK readable text */
+.gpz-foot p,.gpz-foot p.gpz-disc,.gpz-footcol p,.gpz-footbottom{color:#1B1426!important}
+.gpz-h37grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:44px;align-items:start}
+.gpz-h37grid>div{min-width:0}
+.gpz-h37text h1{font-size:clamp(25px,2.6vw,34px);line-height:1.3}
+.gpz-hl{color:#3E1F66;background:linear-gradient(transparent 60%,#FBEBC4 60%);padding:0 6px}
+.gpz-stripes{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:12px}
+.gpz-stripes li{display:flex;align-items:center;gap:16px;background:#FBF8FE;border:2px solid #E3D4F4;border-left:10px solid var(--c);border-radius:12px;padding:12px 16px;min-height:66px}
+.gpz-stripes .gpz-sn{flex:0 0 40px;height:40px;border-radius:10px;background:var(--c);color:#fff;font:700 22px/40px var(--fh);text-align:center}
+.gpz-stripes b{display:inline;font:600 23px/1.2 var(--fh);color:#1B1426;margin-right:8px}
+.gpz-stripes div>span{font-size:19.5px;color:#2B2338}
+.gpz-h37vis{display:flex;flex-direction:column;align-items:center;width:100%;max-width:100%}
+.gpz-fanstage{position:relative;width:min(100%,360px);height:min(110vw,440px);margin:0 auto 26px}
+.gpz-fan{position:absolute;left:14%;right:14%;top:4%;bottom:4%;border-radius:26px;display:block}
+.gpz-fan1{background:#E3D4F4;transform:rotate(-9deg)}
+.gpz-fan2{background:#C9B0E8;transform:rotate(8deg)}
+.gpz-fan3{background:#fff;border:4px solid #5B2E91;box-shadow:0 18px 40px rgba(91,46,145,.22);display:grid;place-items:center;overflow:hidden;animation:gpzfloat 5s ease-in-out infinite}
+.gpz-fan3 img{display:block;width:104%;max-width:none;height:auto;aspect-ratio:2/3;object-fit:contain;margin:0 auto;filter:none;box-shadow:none}
+@keyframes gpzfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.gpz-flow{animation:gpzflow 2s linear infinite}
+@keyframes gpzflow{to{stroke-dashoffset:-46}}
+.gpz-pulse{transform-box:fill-box;transform-origin:center;animation:gpzpulse 2.2s ease-out infinite;opacity:.6}
+@keyframes gpzpulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.7);opacity:0}}
+@media (prefers-reduced-motion:reduce){.gpz-flow,.gpz-pulse,.gpz-fan3{animation:none}}
+.gpz-h37vis .gpz-vizcard{width:100%}
+.gpz-cap2{text-align:center;font-size:20px;color:#2B2338;margin:8px 0 0}
+.gpz-cap3{font-size:18.2px;font-weight:700;color:#2B2338;margin:0 0 8px}
+.gpz-askgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.gpz-ask{background:#fff;border-radius:22px;padding:24px;box-shadow:0 14px 34px rgba(91,46,145,.10)}
+.gpz-ask h3{margin:0 0 8px}
+.gpz-seealso{font-size:20.8px;margin:.8em 0 0;padding:10px 16px;background:#FBF8FE;border-left:6px solid #B4570B;border-radius:10px}
+.gpz-seealso a{color:#3E1F66;font-weight:700}
+.gpz-pay{margin-top:12px;text-align:center}
+@media (max-width:900px){.gpz-h37grid{grid-template-columns:minmax(0,1fr);gap:26px}.gpz-h37vis{order:-1}.gpz-fanstage{width:min(80%,300px);height:min(100vw,380px)}.gpz-askgrid{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:600px){.gpz-vt{font-size:16px!important;letter-spacing:.05em!important}.gpz-stripes b{display:block}}
+
+/* laptop header: show the full nav + Order Now inline from 1181px, hamburger only below that */
+@media(min-width:1260px){.gpz-links,.gpz-buy{display:flex!important}.gpz-opener{display:none!important}.gpz-overlay{display:none!important}.gpz-buy{margin-left:10px}}
+@media(min-width:1260px){.gpz-links a{padding:12px 5px;font-size:18px}.gpz-buy{padding:12px 13px;font-size:18px;margin-left:4px}.gpz-brand{font-size:21px}.gpz-toprow{gap:8px}}
